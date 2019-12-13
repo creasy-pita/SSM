@@ -8,6 +8,6 @@
 <h1>Hello!</h1>
 
 <h2>当前时间：${currentTime}</h2>
-
+<h3>info:${info}</h3>
 </body>
 </html>

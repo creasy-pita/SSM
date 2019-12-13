@@ -15,7 +15,7 @@ import java.util.Date;
  *
  * @ProjectName: SSM
  */
-@WebServlet("/hello")
+@WebServlet("/hello1")
 public class HelloServlet extends HttpServlet {
 
     @Override
