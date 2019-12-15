@@ -1,7 +1,14 @@
 # 描述
 springmvc+mybatis +springboot practise
 
-
+###2019年12月15日
+####integrate with  springboot
+注意点 
+>MapperScan 目前只找到在 SpringBoot 启动类中配置方式，没有找到在  properties中配置的方式
+>@SpringBootApplication(scanBasePackages = {"org.creasypita.User"})  
+>
+>@MapperScan("org.creasypita.User.mappers")
+>mybatis configuration reference : https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
 ### 2019年12月13日
 
 #### spring-context.xml 说明 springmvc 启用的配置的注意点

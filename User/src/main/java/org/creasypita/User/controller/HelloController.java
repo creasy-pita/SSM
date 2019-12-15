@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -21,10 +22,10 @@ public class HelloController {
     private StudentService studentService;
 
     @RequestMapping(value = "hello")
-    public String inputEmployee(Model model) {
+    @ResponseBody
+    public String inputEmployee() {
 
         List<Student> studentList = studentService.GetAll();
-        model.addAttribute("info", "hello my name is creasypita" + studentList.get(0).getName());
-        return "hello";
+        return "hello"+studentList.get(0).getName();
     }
 }
