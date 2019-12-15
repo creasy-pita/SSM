@@ -1,9 +1,22 @@
 # 描述
 springmvc+mybatis +springboot practise
+##
 
-###2019年12月15日
+### 2019年12月15日
 
-####integrate with  springboot
+#### 1 integrate with  springboot
+#### 2 pom.xml settings 
+##### 1 SpringBoot requires that the project inherits SpringBoot's starting dependency on spring-boot-starter-parent;
+##### Integrate SpringMVC at the same time, to import web startup dependency;
+##### Integrate MyBatis to import mybatis start dependencies;
+#####  additional  if use mysal database: There are also MySql connection drivers;
+#### 3 Configure database information in application.properties;
+##### SpringBoot scans the application.properties file under classpath by default and creates the application.properties file under the src\mainresources folder
+#### 4  Writing java code
+##### model,mapper,service,serviceimpl,controller 
+#### 5 location of the Mapper xml file configured in application.properties;
+#### 6 Create a new folder mapper under resources and a new file for *Mapper.xml file
+#### 7 config Mapper class in SpringBootApplication main start class;
 注意点 
 >@SpringBootApplication(scanBasePackages = {"org.creasypita.User","org.creasypita.xxx"})  
 >>需要注意的是如果在启动类不加scanBasePackages，则Spring 容器默认只扫描启动类所在包及其子包中的类并识别为Spring bean。如果需要扫描其他非启动类所在的包及子包的组件，需要手动指定包的路径。scanBasePackages = {“org.creasypita.User”}
