@@ -2,13 +2,15 @@
 springmvc+mybatis +springboot practise
 
 ###2019年12月15日
+
 ####integrate with  springboot
 注意点 
->MapperScan 目前只找到在 SpringBoot 启动类中配置方式，没有找到在  properties中配置的方式
->@SpringBootApplication(scanBasePackages = {"org.creasypita.User"})  
+>@SpringBootApplication(scanBasePackages = {"org.creasypita.User","org.creasypita.xxx"})  
+>>需要注意的是如果在启动类不加scanBasePackages，则Spring 容器默认只扫描启动类所在包及其子包中的类并识别为Spring bean。如果需要扫描其他非启动类所在的包及子包的组件，需要手动指定包的路径。scanBasePackages = {“org.creasypita.User”}
 >
 >@MapperScan("org.creasypita.User.mappers")
->mybatis configuration reference : https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
+>>MapperScan 目前只找到在 SpringBoot 启动类中配置方式，没有找到在  properties中配置的方式
+>>mybatis configuration reference : https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/
 ### 2019年12月13日
 
 #### spring-context.xml 说明 springmvc 启用的配置的注意点
